@@ -1,9 +1,12 @@
 class New < ActiveRecord::Migration
   def up
-    # add migration code here
-  end
+    create_table :messages do |t|
+      t.string :name
+      t.string :msg
+    end
 
-  def down
-    # add reverse migration code here
+    def down
+      drop_table :messages
+    end
   end
 end

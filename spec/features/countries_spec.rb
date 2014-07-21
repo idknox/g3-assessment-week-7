@@ -1,4 +1,4 @@
-require 'spec_helper'
+ require 'spec_helper'
 
 feature 'Countries and Continents' do
 
@@ -8,6 +8,7 @@ feature 'Countries and Continents' do
     click_on 'Africa'
     expect(page).to have_content("Kenya")
     expect(page).to have_content("South Africa")
+    expect(page).to_not have_content("")
   end
 
 end
